@@ -1,0 +1,249 @@
+/* ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  width: 60px;
+}
+.aside__img {
+  width: 60px;
+}
+article img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* BODY */
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(54, 136, 109);
+  color: azure;
+  padding: 0.3rem 0.7rem 0.3rem 0.5rem;
+}
+.nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 12px 0;
+}
+.nav__item {
+  background-color: rgb(45, 93, 77);
+  margin-top: 0.3rem;
+  border-radius: 3px;
+  padding: 0.4em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav__item:hover {
+  filter: brightness(130%);
+}
+.nav__item a {
+  color: white;
+}
+.principal {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.principal__info {
+  border: 2px solid rgb(44, 62, 56);
+  padding: 1rem;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgb(27, 35, 32);
+  margin: 1rem 0;
+}
+.principal__title {
+  font-size: 2.3rem;
+  background: linear-gradient(to right, rgb(5, 20, 15), rgb(89, 156, 134));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.principal__subtitle {
+  color: rgb(55, 65, 82);
+  font-size: 1rem;
+}
+.principal__info-description {
+  color: rgb(30, 27, 27);
+  color: white;
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(41, 100, 80);
+}
+.footer__redes a {
+  padding: 4px;
+  color: white;
+}
+.footer__pack {
+  text-align: center;
+}
+.footer__description {
+  display: inline;
+  color: white;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  article img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "nav nav nav"
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+  /* BODY */
+  .header {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: rgb(66, 112, 97);
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    background-color: whitesmoke;
+    font-size: 12px;
+    margin-left: 1rem;
+  }
+  .nav__item:hover {
+    filter: brightness(130%);
+  }
+  .nav__item a {
+    color: black;
+  }
+  .principal {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .principal__title {
+    font-size: 3.2rem;
+  }
+  .principal__subtitle {
+    font-size: 2rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: black;
+  }
+  .principal__info {
+    padding: 1.5rem;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1rem;
+    margin: 2rem 0;
+  }
+  .footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(41, 100, 80);
+  }
+  .footer__redes a {
+    padding: 4px;
+    color: white;
+  }
+  .footer__pack {
+    text-align: center;
+    margin-right: 2rem;
+  }
+  .footer__description {
+    display: inline;
+    color: white;
+  }
+  footer .logo {
+    margin-left: 2rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .logo {
+    margin-left: 2rem;
+    width: 70px;
+  }
+  .nav {
+    padding: 0.7rem;
+  }
+  .nav__item {
+    padding: 0.8em;
+  }
+  .nav__list {
+    margin-right: 2.5rem;
+  }
+  .principal {
+    width: 85%;
+  }
+  .principal__title {
+    font-size: 4.3rem;
+    margin: 1.5rem 0;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .ocultar {
+    display: none;
+  }
+  .footer {
+    padding: 0.7rem;
+  }
+  .footer__description {
+    font-size: 1.2rem;
+  }
+}
